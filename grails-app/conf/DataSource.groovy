@@ -33,19 +33,22 @@ environments {
             //dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             dbCreate = "update"
             //url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
-            url = "jdbc:derby:/opt/development/dbs/derby/bin/FPADB"
+            //url = "jdbc:derby:/opt/development/dbs/derby/bin/FPADB"
+            utl = "jdbc:derby:db/FPADB"
         }
     }
     test {
         dataSource {
             dbCreate = "update"
             //url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
-            url = "jdbc:derby:/opt/development/dbs/derby/bin/FPADB"
+            url = "jdbc:derby:db/FPADB"
         }
     }
     production {
         dataSource {
             dbCreate = "update"
+            url = "jdbc:derby:db/FPADB"
+            /*
             url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
             properties {
                // See http://grails.org/doc/latest/guide/conf.html#dataSource for documentation
@@ -67,6 +70,7 @@ environments {
                jdbcInterceptors = "ConnectionState"
                defaultTransactionIsolation = java.sql.Connection.TRANSACTION_READ_COMMITTED
             }
+            */
         }
     }
 }

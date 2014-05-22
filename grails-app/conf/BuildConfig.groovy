@@ -51,7 +51,7 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
         // runtime 'mysql:mysql-connector-java:5.1.27'
         // runtime 'org.postgresql:postgresql:9.3-1100-jdbc41'
-        runtime 'mysql:mysql-connector-java:5.1.22'
+        //runtime 'mysql:mysql-connector-java:5.1.22'
         runtime 'org.apache.derby:derby:jar:10.10.2.0'
     }
 
@@ -91,6 +91,6 @@ grails.project.dependency.resolution = {
 grails.plugin.reveng.packageName=net.caf.model
 grails.plugin.reveng.overwriteExisting=true
 grails.plugin.reveng.defaultSchema=APP
-grails.plugin.reveng.includeTables=['COMPLEXITY']
+//grails.plugin.reveng.includeTables=['COMPLEXITY']
 //grails.plugin.reveng.destDir=grails-app/domain
 //grails.plugin.reveng.defaultCatalog=APP

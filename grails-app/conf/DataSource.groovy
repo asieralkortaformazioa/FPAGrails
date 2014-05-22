@@ -24,6 +24,7 @@ hibernate {
     cache.region.factory_class = 'net.sf.ehcache.hibernate.EhCacheRegionFactory' // Hibernate 3
 //    cache.region.factory_class = 'org.hibernate.cache.ehcache.EhCacheRegionFactory' // Hibernate 4
     singleSession = true // configure OSIV singleSession mode
+
 }
 
 // environment specific settings
@@ -34,20 +35,20 @@ environments {
             dbCreate = "update"
             //url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
             //url = "jdbc:derby:/opt/development/dbs/derby/bin/FPADB"
-            utl = "jdbc:derby:db/FPADB"
+            url = "jdbc:derby:/home/developer/Development/projects/Caf/FPA/FPA_Webapp/db/FPADB"
         }
     }
     test {
         dataSource {
             dbCreate = "update"
             //url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
-            url = "jdbc:derby:db/FPADB"
+            url = "jdbc:derby:/home/developer/Development/projects/Caf/FPA/FPA_Webapp/db/FPADB"
         }
     }
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:derby:db/FPADB"
+            url = "jdbc:derby:/home/developer/Development/projects/Caf/FPA/FPA_Webapp/db/FPADB"
             /*
             url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
             properties {
